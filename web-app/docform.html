@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div>
+            <h1>Post to cache</h1>
+            <form id = "postForm" method="POST" action="http://localhost:3000/api/documents">
+                Message:<br>
+                <input type="text" name="message"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div>
+            <h1>Get document from cache</h1>
+            <form id = "getForm" method="GET" onSubmit="concatenateAction()">
+                ID:<br>
+                <input type="text" name="id"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div>
+            <h1>Clear cache</h1>
+            <form id = "deleteForm" onSubmit="httpDeleteAsync()">
+                <button type="submit">Clear</button>
+            </form>
+        </div>
+    </body>
+</html>
